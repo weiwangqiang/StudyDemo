@@ -1,0 +1,6 @@
+//include ':launchmode'
+rootProject.name='KotlinDemo'
+include ':app'
+include ':eventbusdemo'
+include ':daggerdemo'
+include ':databinding'
