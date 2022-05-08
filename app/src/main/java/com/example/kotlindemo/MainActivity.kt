@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         view1.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
                 Toast.makeText(this@MainActivity, "hello", Toast.LENGTH_SHORT).show()
-                ARouter.getInstance().build(Constant.SECOND_ACTIVITY_ROUT).navigation()
+                ARouter.getInstance().build(Constant.SECOND_ACTIVITY).navigation()
             }
         })
     }

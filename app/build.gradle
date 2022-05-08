@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.kotlindemo"
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -34,8 +34,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility 1.8
-        targetCompatibility 1.8
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
@@ -78,7 +78,10 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
 
     // ARouter
-    implementation 'com.alibaba:arouter-api:1.5.2'
-    annotationProcessor 'com.alibaba:arouter-compiler:1.5.2'
+    def aroute_version = '1.5.2'
+    implementation "com.alibaba:arouter-api:$aroute_version"
+    annotationProcessor "com.alibaba:arouter-compiler:$aroute_version"
     // ARouter
+
+    implementation project(':aroute')
 }

@@ -1,6 +1,7 @@
 //include ':launchmode'
-rootProject.name='KotlinDemo'
+rootProject.name='StudyDemo'
 include ':app'
 include ':eventbusdemo'
 include ':daggerdemo'
 include ':databinding'
+include ':aroute'
