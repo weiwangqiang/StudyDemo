@@ -82,6 +82,7 @@ dependencies {
     implementation "com.alibaba:arouter-api:$aroute_version"
     annotationProcessor "com.alibaba:arouter-compiler:$aroute_version"
     // ARouter
-
-    implementation project(':aroute')
+    if (arouteIsModule.toBoolean()) {
+        implementation project(':aroute')
+    }
 }

@@ -1,15 +1,22 @@
 plugins {
-    id 'com.android.application'
-//    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+}
+def module = arouteIsModule.toBoolean()
+
+if (module) {
+    apply plugin:  'com.android.library'
+} else {
+    apply plugin:  'com.android.application'
 }
 
 android {
     compileSdkVersion 32
 
     defaultConfig {
-        applicationId "com.example.aroute"
+        if (!module) {
+            applicationId "com.example.aroute"
+        }
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
@@ -54,4 +61,8 @@ dependencies {
     def aroute_version = '1.5.2'
     implementation "com.alibaba:arouter-api:$aroute_version"
     kapt 'com.alibaba:arouter-compiler:1.2.2'  //kotlin 版本
+
+    // https://mvnrepository.com/artifact/com.alibaba/fastjson
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 }
