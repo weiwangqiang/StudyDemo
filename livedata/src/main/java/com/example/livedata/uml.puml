@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+abstract class LiveData {
+String name
+postValue(T value)
+}
+class MutableLiveData
+
+LiveData <|-- MutableLiveData
+
+
+@enduml

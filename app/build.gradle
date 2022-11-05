@@ -80,6 +80,7 @@ dependencies {
     // ARouter
     def aroute_version = '1.5.2'
     implementation "com.alibaba:arouter-api:$aroute_version"
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.7.10")
     annotationProcessor "com.alibaba:arouter-compiler:$aroute_version"
     // ARouter
     if (arouteIsModule.toBoolean()) {

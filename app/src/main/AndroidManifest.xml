@@ -19,8 +19,8 @@
         <activity android:name=".viewmodel.ViewModelActivity">
 
         </activity>
-        <activity android:name=".lifecycle.LifecycleActivity"></activity>
-        <activity android:name=".ButterKnifeActivity" />
+        <activity android:name=".lifecycle.LifecycleActivity"/>
+        <activity android:name=".ButterKnifeActivity"/>
         <activity android:name=".glide.GlideActivity" />
         <activity android:name=".CoroutinesActivity" />
         <activity

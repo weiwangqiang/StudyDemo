@@ -28,9 +28,6 @@ public class DispatchView extends LinearLayout {
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        Thread thread;
-        Looper.prepare();
-
         Log.d(TAG, "dispatchTouchEvent: " + (ev.getAction() == MotionEvent.ACTION_DOWN));
         return super.dispatchTouchEvent(ev);
     }
