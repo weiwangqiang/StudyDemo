@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
-import java.net.Inet4Address;
 
 public class MainActivity extends BaseActivity {
 
