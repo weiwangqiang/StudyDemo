@@ -9,7 +9,7 @@ import com.example.aroute.databinding.ActivitySecondBinding
 
 @Route(path = Constant.SECOND_ACTIVITY)
 class SecondActivity : BaseActivity() {
-    @Autowired
+    @Autowired(name = "title")
     @JvmField
     var title: String? = null
 
@@ -24,5 +24,6 @@ class SecondActivity : BaseActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.title.text = "$title === > ${news?.title}"
+        setResult(123)
     }
 }

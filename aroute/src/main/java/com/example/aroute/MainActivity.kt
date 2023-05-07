@@ -1,5 +1,6 @@
 package com.example.aroute
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -44,22 +45,22 @@ class MainActivity : BaseActivity() {
             .navigation(this, object : NavCallback() {
                 override fun onArrival(postcard: Postcard?) {
                     Log.d(TAG, "onArrival: ")
+                    // 路由到达时调用
                 }
 
                 override fun onInterrupt(postcard: Postcard?) {
-                    Log.d(TAG, "onInterrupt: ")
                     super.onInterrupt(postcard)
+                    // 路由被拦截时调用
                 }
 
                 override fun onLost(postcard: Postcard?) {
                     super.onLost(postcard)
-                    Log.d(TAG, "onLost: ")
+                    // 路由被丢失时调用
                 }
 
                 override fun onFound(postcard: Postcard?) {
                     super.onFound(postcard)
-                    Log.d(TAG, "onFound: ")
-
+                    // 路由目标被发现时调用
                 }
             })
     }
